@@ -1,0 +1,37 @@
+.footer {
+    padding: 25px 0 35px;
+    color: #FFF;
+    background-color: darken($grey, 76%);
+    text-align: left;
+
+    > * {
+        @include content-width; 
+        padding: 0 5px; 
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+        font-family: $heading-font;
+        font-size: 18px;
+    }
+}
+
+.nav {
+    &__links {
+        @include flex-column(8px);
+
+        &--business {
+            margin-bottom: 8px;
+            font-weight: $font-weight-medium;
+
+            i {
+                width: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    a {
+        color: #FFF;
+    }
+}

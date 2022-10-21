@@ -1,0 +1,29 @@
+@use "sass:math";
+
+@function unitless($value) {
+    @return math.div($value, $value * 0 + 1);
+}
+
+@function limit($value, $breakpoint) {
+    @return math.div(unitless($value) * map-get($breakpoints, $breakpoint), 100);
+}
+
+@function min-value($value, $breakpoint) {
+    $limit: limit($value, $breakpoint);
+    @return min($value, $limit);
+}
+
+@function image-width($columns, $container-gap, $container-width) {
+    @if ($columns == 1) {
+        @return $container-width;
+    } 
+
+    $total-gap: $container-gap * ($columns - 1);
+    $image-width: calc(($container-width - $total-gap) / $columns);
+    @return $image-width;
+}
+
+@function image-height($columns, $container-gap: $main-gap, $container-width: $image-container-width) {
+    $image-height: calc(image-width($columns, $container-gap, $container-width) * $image-ratio);
+    @return $image-height;
+}

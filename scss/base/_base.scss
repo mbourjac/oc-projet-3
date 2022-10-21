@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    min-height: 100vh;
+    background-color: $grey;
+    font-family: $body-font;
+    box-sizing: border-box;
+
+    @include desktop {
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin grid-column($gap) {
+    display: grid;
+    grid-template-rows: auto;
+    gap: $gap;
+}
+
+@mixin flex-column($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin circle($value) {
+    width: $value;
+    height: $value;
+    border-radius: 50%;
+}
+
+@mixin content-width {
+    width: min-value($content-width, mobile);
+    margin: 0 auto;
+
+    @include tablet {
+        width: min-value($content-width, desktop-large);
+    }
+}
+
+@mixin border-radius($sides: all) {
+    @if ($sides == top) {
+        border-radius: $main-border-radius $main-border-radius 0 0;
+    } @else {
+        border-radius: $main-border-radius;
+    }
+}
+
+@mixin box-shadow($opacity: 0.2, $hover: true) {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,$opacity);
+
+    @if ($hover) {
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,$opacity);
+        }
+    }
+}
+

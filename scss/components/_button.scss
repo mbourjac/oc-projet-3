@@ -1,0 +1,18 @@
+.button {
+    @include box-shadow;
+    height: 50px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    color: #FFF;
+    background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
+    font-weight: $font-weight-medium;
+
+    &:hover {
+        background: linear-gradient(
+            175deg,
+            lighten($secondary-color, 3%) 3%, 
+            lighten($primary-color, 3%)
+        );
+    }
+}
