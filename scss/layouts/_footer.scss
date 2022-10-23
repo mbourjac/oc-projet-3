@@ -17,21 +17,22 @@
 }
 
 .nav {
-    &__links {
+    &__list {
         @include flex-column(8px);
+    }
+
+    &__link {
+        a {
+            color: #FFF;
+        }
 
         &--business {
-            margin-bottom: 8px;
             font-weight: $font-weight-medium;
 
             i {
                 width: 20px;
                 margin-right: 10px;
             }
-        }
-    }
-
-    a {
-        color: #FFF;
-    }
+        } 
+    }    
 }
