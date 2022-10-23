@@ -1,6 +1,6 @@
 @use "sass:math";
 
-.main {
+.home {
     @include grid-column(0);
     padding-bottom: 64px;
 
@@ -191,70 +191,69 @@
             gap: $main-gap-max;
         }
     }
+}
 
-    &__item {
-        @include border-radius;
-        @include box-shadow;
-        position: relative;
+.restaurant-card {
+    @include border-radius;
+    @include box-shadow;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFF;
+
+    &__new {
+        @include box-shadow($hover: false);
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        padding: 8px 12px;
+        border-radius: 2px;
+        color: darken($tertiary-color, 50%);
+        background-color: $tertiary-color;
+    }
+
+    &__image {
+        @include border-radius(top);
         width: 100%;
-        margin: 0 auto;
-        background-color: #FFF;
+        height: min-value(image-height(1), mobile);
+        object-fit: cover;
+        object-position: bottom;
 
-        &__new {
-            @include box-shadow($hover: false);
+        &--position {
+            object-position: center 61%;
+        }
+
+        @include tablet {
+            height: image-height(2);
+        }
+
+        @media screen and (min-width: 1180px) {
+            height: image-height(3);
+        }
+
+        @include desktop {
+            height: image-height(2, $main-gap-max, calc($image-container-width - 435px));
+        }
+
+        @media screen and (min-width: 1675px) {
+            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - 435px));
+        }
+    }
+
+    &__heading {
+        position: relative;
+        margin: 18px 12px 5px;
+
+        .fa-heart {
             position: absolute;
-            top: 13px;
-            right: 13px;
-            padding: 8px 12px;
-            border-radius: 2px;
-            color: darken($tertiary-color, 50%);
-            background-color: $tertiary-color;
+            top: 5px;
+            right: 12px;
+            width: 20px;
         }
-    
-        &__image {
-            @include border-radius(top);
-            display: block;
-            width: 100%;
-            height: min-value(image-height(1), mobile);
-            object-fit: cover;
-            object-position: bottom;
+    }
 
-            &--position {
-                object-position: center 61%;
-            }
-
-            @include tablet {
-                height: image-height(2);
-            }
-
-            @media screen and (min-width: 1180px) {
-                height: image-height(3);
-            }
-
-            @include desktop {
-                height: image-height(2, $main-gap-max, calc($image-container-width - 435px));
-            }
-
-            @media screen and (min-width: 1675px) {
-                height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - 435px));
-            }
-        }
-    
-        &__heading {
-            position: relative;
-            margin: 18px 12px 5px;
-
-            .fa-heart {
-                position: absolute;
-                top: 5px;
-                right: 12px;
-                width: 20px;
-            }
-        }
-    
-        &__location {
-            margin: 0 12px 18px;
-            font-weight: $font-weight-light;
-        }
+    &__location {
+        margin: 0 12px 18px;
+        font-weight: $font-weight-light;
     }
 }
