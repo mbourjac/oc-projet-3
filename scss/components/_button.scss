@@ -1,9 +1,9 @@
 .button {
     @include box-shadow;
-    height: 50px;
+    height: to-rem(50px);
     padding: 15px 20px;
     border: none;
-    border-radius: 25px;
+    border-radius: to-rem(25px);
     color: #FFF;
     background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
     font-weight: $font-weight-medium;

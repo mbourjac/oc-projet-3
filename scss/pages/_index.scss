@@ -71,7 +71,7 @@
 
     &__input {
         grid-area: input;
-        width: 108px;
+        width: to-rem(108px);
         border: none;
         background-color: inherit;
 
@@ -159,7 +159,7 @@
         align-items: center;
         column-gap: 20px;
         width: calc(100% - 12px);
-        height: 70px;
+        height: to-rem(70px);
         margin-left: 12px;
         background-color: $grey;
         font-weight: $font-weight-medium;
@@ -167,7 +167,7 @@
 
         i {
             justify-self: end;
-            width: 18px;
+            width: to-rem(18px);
             color: darken($grey, 48%);
         }
 
@@ -184,10 +184,11 @@
             @include flex-center;
             content: counter(description);
             position: absolute;
-            top: 23px;
+            top: calc(50% - 12px);
             left: -12px;
             color: #FFF;
             background-color: $primary-color;
+            font-size: 16px;
         }
     }
 }

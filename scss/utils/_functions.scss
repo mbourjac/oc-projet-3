@@ -1,5 +1,3 @@
-@use "sass:math";
-
 @function unitless($value) {
     @return math.div($value, $value * 0 + 1);
 }
@@ -26,4 +24,10 @@
 @function image-height($columns, $container-gap: $main-gap, $container-width: $image-container-width) {
     $image-height: calc(image-width($columns, $container-gap, $container-width) * $image-ratio);
     @return $image-height;
+}
+
+@function to-rem($px-value) {
+    $unitless-value: unitless($px-value);
+    $rem-value: math.div($unitless-value * 1rem, 16);
+    @return $rem-value;
 }

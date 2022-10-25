@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     background-color: $grey;
     font-family: $body-font;
+    font-size: to-rem(16px);
     box-sizing: border-box;
 
     @include desktop {
@@ -30,4 +31,8 @@ a {
 
 img {
     display: block;
+}
+
+button, input {
+    font-size: to-rem(16px);
 }

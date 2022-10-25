@@ -12,13 +12,13 @@
     &__heading {
         margin-bottom: 20px;
         font-family: $heading-font;
-        font-size: 18px;
+        font-size: to-rem(18px);
     }
 }
 
 .nav {
     &__list {
-        @include flex-column(8px);
+        @include flex-column(to-rem(8px));
     }
 
     &__link {
@@ -30,8 +30,8 @@
             font-weight: $font-weight-medium;
 
             i {
-                width: 20px;
-                margin-right: 10px;
+                width: to-rem(20px);
+                margin-right: to-rem(10px);
             }
         } 
     }    
