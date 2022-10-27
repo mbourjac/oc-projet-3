@@ -1,8 +1,7 @@
-@use "sass:math";
-
 $body-font: 'Roboto', sans-serif;
 $heading-font: 'Shrikhand', cursive;
 $font-weight-light: 300;
+$font-weight-regular: 400;
 $font-weight-medium: 500;
 
 $primary-color: #9356DC;
@@ -20,9 +19,26 @@ $breakpoints: (
 
 $content-width: 89.3%;
 $content-margin: math.div(100 - $content-width, 2);
+$content-pading: $content-margin;
+
 $main-gap: 2.675vw;
 $main-gap-max: 35px;
 $main-border-radius: 15px;
+$main-border-radius-large: 36px;
+$main-padding-top: 45px;
+$main-padding-bottom: 64px;
 
 $image-container-width: 89.3vw;
 $image-ratio: math.div(174, 335);
+$side-panel: 400px;
+
+$banner-height: 257px;
+$menu-padding-top: $main-border-radius-large;
+$menu-margin-top: -$main-border-radius-large;
+$menu-horizontal-spacing: 2.16vw;
+$input-width: 60px;
+$input-icon-height: 20px;
+
+$header-height: 66.8px;
+$footer-height: 198.3px;
+$menu-height: 570.4px;

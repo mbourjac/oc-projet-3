@@ -1,3 +1,9 @@
+@mixin mobile-only {
+    @media screen and (max-width: calc(map-get($breakpoints, tablet) - 1px)) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
@@ -10,7 +16,7 @@
     }
 }
 
-@mixin grid-column($gap) {
+@mixin grid-column($gap: 0) {
     display: grid;
     grid-template-rows: auto;
     gap: $gap;
@@ -28,26 +34,37 @@
     align-items: center;
 }
 
+@mixin absolute-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
 @mixin circle($value) {
     width: $value;
     height: $value;
     border-radius: 50%;
 }
 
-@mixin content-width {
-    width: min-value($content-width, mobile);
+@mixin content-width($width: $content-width) {
+    width: min-value($width, mobile);
     margin: 0 auto;
 
     @include tablet {
-        width: min-value($content-width, desktop-large);
+        width: min-value($width, desktop-large);
     }
 }
 
-@mixin border-radius($sides: all) {
+@mixin border-radius($sides: all, $border-radius: $main-border-radius) {
     @if ($sides == top) {
-        border-radius: $main-border-radius $main-border-radius 0 0;
+        border-radius: $border-radius $border-radius 0 0;
+    } @else if ($sides == right) {
+        border-radius: 0 $border-radius $border-radius 0;
     } @else {
-        border-radius: $main-border-radius;
+        border-radius: $border-radius;
     }
 }
 
@@ -63,3 +80,8 @@
     }
 }
 
+@mixin text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

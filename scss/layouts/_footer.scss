@@ -6,13 +6,21 @@
 
     > * {
         @include content-width; 
-        padding: 0 5px; 
+        padding: 0 5px;
     }
 
     &__heading {
         margin-bottom: 20px;
         font-family: $heading-font;
         font-size: to-rem(18px);
+    }
+
+    &--restaurant {
+        @include mobile-only {
+            > * {
+                width: $content-width;
+            }
+        }
     }
 }
 

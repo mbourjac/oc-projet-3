@@ -1,0 +1,230 @@
+.restaurant {
+    background-color: #FFF;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 30px;
+        padding: $main-padding-top $content-pading $main-padding-bottom;
+    }
+
+    @include desktop {
+        grid-template-columns: 1fr;
+        row-gap: $main-gap-max;
+        padding: $main-padding-top 0 $main-padding-bottom;
+    }
+
+    &__image {
+        width: 100%;
+        height: $banner-height;
+        object-fit: cover;
+
+        @include tablet {
+            height: 100%;
+            border-radius: $main-border-radius-large;
+        }
+
+        @include desktop {
+            width: min-value($content-width, desktop-large);
+            height: max(100vh - ($header-height + $main-padding-top + $main-gap-max + $menu-height + $main-padding-bottom + $footer-height), $banner-height);
+            margin: 0 auto;
+        }
+    }
+}
+
+.menu {
+    @include grid-column;
+    @include border-radius(top, $main-border-radius-large);
+    position: relative;
+    padding: $menu-padding-top max(3.46%, 13px) 0;
+    margin: $menu-margin-top auto 0;
+    background-color: $grey;
+
+    @include tablet {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: $main-border-radius-large;
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "heading heading heading"
+            "starter main dessert"
+            ". button .";
+        column-gap: min-value($menu-horizontal-spacing, desktop-large);
+        width: min-value($content-width, desktop-large);
+        padding: $menu-padding-top min-value($menu-horizontal-spacing, desktop-large) 0;
+    }
+    
+    &__heading {
+        position: relative;
+        font-family: $heading-font;
+        padding-right: to-rem(34px);
+        margin-bottom: 30px;
+
+        @include desktop {
+            grid-area: heading;
+            margin-bottom: 38px;
+        }
+
+        .fa-heart {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: to-rem(24px);
+        }
+    }
+
+    &__button {
+        padding: 15px 48px;
+        margin: 0 auto 40px;
+
+        @include desktop {
+            grid-area: button;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.category {
+    margin-bottom: 40px;
+
+    @include desktop {
+        margin-bottom: 60px;
+    }
+
+    &__legend {
+        position: relative;
+        margin-bottom: 20px;
+        color: darken($grey, 48%);
+        font-weight: $font-weight-regular;
+        text-transform: uppercase;
+
+        @include desktop {
+            margin-bottom: 28px;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: $tertiary-color;
+        }
+    }
+
+    &__list {
+        @include grid-column(12px);
+
+        @include desktop {
+            row-gap: 20px;
+        }
+    }
+
+    &--starter {
+        @include desktop {
+            grid-area: starter;
+        }
+    }
+
+    &--main {
+        @include desktop {
+            grid-area: main;
+        } 
+    }
+
+    &--dessert {
+        @include desktop {
+            grid-area: dessert;
+        }
+    }
+}
+
+.dish {
+    @include border-radius;
+    @include box-shadow;
+    display: flex;
+    background-color: #FFF;
+    overflow: hidden;
+    animation: 1s both slide-up;
+
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: $i * 0.15s;
+        }
+    }
+
+    &:hover {
+        .dish__input {
+           margin-right: 0;
+
+           &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    
+    &__label {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: 
+            "name name"
+            "description price";
+        row-gap: 8px;
+        column-gap: 18px;
+        flex-grow: 1;
+        padding: 13px 10px;
+        font-weight: $font-weight-medium;
+        cursor: pointer;
+    }
+
+    &__name {
+        @include text-ellipsis;
+        grid-area: name;
+    }
+
+    &__description {
+        @include text-ellipsis;
+        grid-area: description;
+        font-weight: $font-weight-light;
+    }
+
+    &__price {
+        grid-area: price;
+        padding: 0 10px;
+    }
+
+    &__input {
+        @include border-radius(right);
+        position: relative;
+        appearance: none;
+        flex-shrink: 0;
+        width: to-rem($input-width);
+        margin: 0;
+        padding: 0;
+        margin-right: to-rem(-$input-width);
+        background-color: $tertiary-color;
+        transition-duration: 0.5s;
+
+        &::before {
+            @include absolute-center;
+            @include circle(to-rem($input-icon-height));
+            content: "";
+            background-color: #FFF;
+        }
+
+        &::after {
+            @include absolute-center;
+            content: "";
+            height: to-rem(math.div($input-icon-height, 2));
+            width: to-rem(math.div($input-icon-height, 4));
+            transform: rotate(-315deg);
+            border-bottom: 2px solid $tertiary-color;
+            border-right: 2px solid $tertiary-color;
+            transition-duration: 0.5s;
+        }
+    }
+}

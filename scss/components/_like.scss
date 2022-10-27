@@ -1,18 +1,26 @@
-.fa-heart.fa {
-    &-solid {
-        background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
-        background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
-    }
+.fa-heart {
+    cursor: pointer;
 
-    &-regular {
-        color: darken($grey, 50%);
-        background-color: #FFF;
-        transition: opacity 0.45s;
-
-        &:hover {
-            opacity: 0;
+    &.fa {
+        &-solid {
+            background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+        }
+    
+        &-regular {
+            color: darken($grey, 50%);
+            background-color: #FFF;
+            transition: opacity 0.45s;
+    
+            &--restaurant {
+                background-color: $grey;
+            }
+    
+            &:hover {
+                opacity: 0;
+            }
         }
     }
 }

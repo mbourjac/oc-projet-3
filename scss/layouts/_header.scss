@@ -1,11 +1,31 @@
 .header {
     position: relative;
     padding: 20px 0 10px;
+    background-color: #FFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
 
     &__heading {
         margin: 0;
         font-family: $heading-font;
+    }
+
+    &__back {
+        justify-self: left;
+        align-self: center;
+        margin-left: max(3.46vw, 13px);
+
+        @include tablet {
+            margin-left: 5.35vw;
+        }
+
+        @include desktop {
+            margin-left: calc((100vw - min-value(89.3vw, desktop-large)) / 2);
+        }
+    }
+
+    &--restaurant {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
     }
 }

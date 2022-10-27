@@ -31,3 +31,7 @@
     $rem-value: math.div($unitless-value * 1rem, 16);
     @return $rem-value;
 }
+
+@function to-vw($value, $viewport-width) {
+    @return math.div($value, $viewport-width) * 100vw;
+}
