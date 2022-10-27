@@ -1,6 +1,6 @@
 .home {
     @include grid-column(0);
-    padding-bottom: 64px;
+    padding-bottom: $main-padding-bottom;
 
     @include tablet {
         @include content-width;
@@ -10,11 +10,11 @@
             "search description"
             "restaurants restaurants";
         column-gap: $main-gap;
-        padding-top: 45px;
+        padding-top: $main-padding-top;
     }
 
     @include desktop {
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: $side-panel 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
             "search restaurants"
@@ -192,7 +192,7 @@
 }
 
 .restaurants {
-    padding-top: 45px;
+    padding-top: $main-padding-top;
     text-align: left;
 
     @include tablet {
@@ -289,11 +289,11 @@
         }
 
         @include desktop {
-            height: image-height(2, $main-gap-max, calc($image-container-width - 435px));
+            height: image-height(2, $main-gap-max, calc($image-container-width - ($side-panel + $main-gap-max)));
         }
 
         @media screen and (min-width: 1675px) {
-            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - 435px));
+            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - ($side-panel + $main-gap-max)));
         }
     }
 
