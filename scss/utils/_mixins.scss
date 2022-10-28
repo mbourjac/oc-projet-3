@@ -34,12 +34,16 @@
     align-items: center;
 }
 
-@mixin absolute-center {
+@mixin absolute-cover {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+}
+
+@mixin absolute-center {
+    @include absolute-cover;
     margin: auto;
 }
 
@@ -68,6 +72,24 @@
     }
 }
 
+@mixin opacity-transition($duration: 0.5s, $easing: ease, $hover: true) {
+    position: relative;
+
+    @if ($hover) {
+        &:hover {
+            &::after {
+                opacity: 1;
+            } 
+        }
+    }
+
+    &::after {
+        @include absolute-cover;
+        opacity: 0;
+        transition: opacity $duration $easing;
+    }
+}
+
 @mixin box-shadow($opacity: 0.2, $hover: true) {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,$opacity);
 
@@ -84,4 +106,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+@mixin icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }

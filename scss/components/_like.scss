@@ -1,26 +1,19 @@
 .fa-heart {
+    @include opacity-transition;
+    color: darken($grey, 50%);
+    background-color: #FFF;
     cursor: pointer;
 
-    &.fa {
-        &-solid {
-            background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
-            background-clip: text;
-            -webkit-text-fill-color: transparent; 
-            -moz-text-fill-color: transparent;
-        }
-    
-        &-regular {
-            color: darken($grey, 50%);
-            background-color: #FFF;
-            transition: opacity 0.45s;
-    
-            &--restaurant {
-                background-color: $grey;
-            }
-    
-            &:hover {
-                opacity: 0;
-            }
-        }
+    &--restaurant {
+        background-color: $grey;
+    }
+
+    &::after {
+        @include icon;
+        content: "\f004";
+        background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
     }
 }
