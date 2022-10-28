@@ -248,18 +248,9 @@
         right: 13px;
         padding: 8px 12px;
         border-radius: 2px;
-        color: darken($tertiary-color, 40%);
-        background-color: lighten($tertiary-color, 5%);
-        animation-name: pulse;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-
-        &--fade {
-            color: darken($tertiary-color, 50%);
-            background-color: $tertiary-color;
-            animation-name: pulse, fade;
-        }
+        color: darken($tertiary-color, 50%);
+        background-color: $tertiary-color;
+        animation: pulse 3s ease-in-out infinite;
     }
 
     &__image {

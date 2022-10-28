@@ -1,5 +1,7 @@
 @keyframes pulse {
     50% {
+        color: darken($tertiary-color, 40%);
+        background-color: lighten($tertiary-color, 5%);
         transform: scale(1.1);
     }
 }
