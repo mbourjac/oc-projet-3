@@ -226,5 +226,13 @@
             border-right: 2px solid $tertiary-color;
             transition-duration: 0.5s;
         }
+
+        &:checked {
+            width: to-rem($input-width);
+
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
     }
 }
