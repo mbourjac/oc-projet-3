@@ -15,7 +15,7 @@
         align-self: center;
         padding: 6px 10px;
         margin-left: max(3.46vw, 13px);
-        font-size: to-rem(20px);
+        font-size: to-rem(20px);    
 
         @include tablet {
             margin-left: 5.35vw;
@@ -23,6 +23,10 @@
 
         @include desktop {
             margin-left: calc((100vw - min-value(89.3vw, desktop-large)) / 2);
+        }
+
+        &:hover {
+            animation: 0.8s shake linear;
         }
     }
 
