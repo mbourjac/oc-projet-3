@@ -158,11 +158,11 @@
     }
 
     &:hover {
-        .dish__input {
-           margin-right: 0;
+        .dish__input:not(:checked) {
+            width: to-rem($input-width);
 
-           &::after {
-                transform: rotate(45deg);
+            &::before {
+                animation: 0.5s both spin linear;
             }
         }
     }
@@ -199,41 +199,25 @@
 
     &__input {
         @include border-radius(right);
-        position: relative;
-        appearance: none;
+        display: flex;
+        align-items: center;
         flex-shrink: 0;
-        width: to-rem($input-width);
-        margin: 0;
-        padding: 0;
-        margin-right: to-rem(-$input-width);
+        width: 0;
         background-color: $tertiary-color;
+        appearance: none;
         cursor: pointer;
         transition-duration: 0.5s;
-
+        
         &::before {
-            @include absolute-center;
-            @include circle(to-rem($input-icon-height));
-            content: "";
-            background-color: #FFF;
-        }
-
-        &::after {
-            @include absolute-center;
-            content: "";
-            height: to-rem(math.div($input-icon-height, 2));
-            width: to-rem(math.div($input-icon-height, 4));
-            transform: rotate(-315deg);
-            border-bottom: 2px solid $tertiary-color;
-            border-right: 2px solid $tertiary-color;
-            transition-duration: 0.5s;
+            @include icon;
+            content: "\f058";
+            color: #FFF;
+            font-size: to-rem(20px);
+            margin-left: to-rem(20px);
         }
 
         &:checked {
             width: to-rem($input-width);
-
-            &::after {
-                transform: rotate(45deg);
-            }
         }
     }
 }
