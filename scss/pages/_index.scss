@@ -148,11 +148,13 @@
         background-color: $grey;
         font-weight: $font-weight-medium;
         counter-increment: description;
+        transition: all 0.4s;
 
         i {
             justify-self: end;
             width: to-rem(18px);
             color: darken($grey, 48%);
+            transition: color 0.4s;
         }
 
         &:hover {
