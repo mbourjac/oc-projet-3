@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/710340c986.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <title>Le délice des sens</title>
+</head>
+<body>
+    <header class="header header--restaurant">
+        <a href="../index.html" class="header__back"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1 class="header__heading">ohmyfood</h1>
+    </header>
+    <main class="restaurant">
+        <img src="../images/restaurants/4.jpg" alt="" class="restaurant__image">
+        <form class="menu">
+            <h2 class="menu__heading">
+                Le délice des sens
+                <i class="fa-regular fa-heart fa-heart--restaurant"></i>
+            </h2>
+            <fieldset class="category category--starter">
+                <legend class="category__legend">Entrées</legend>
+                <ul class="category__list">
+                    <li class="dish dish--1">
+                        <label for="snails" class="dish__label">
+                            <span class="dish__name">Tartare de thon</span>
+                            <span class="dish__description">Assaisonné au yuzu</span>
+                            <span class="dish__price">25€</span>
+                        </label>
+                        <input type="checkbox" name="menu" id="snails" value="snails" class="dish__input">
+                    </li>
+                    <li class="dish dish--2">
+                        <label for="foie-gras" class="dish__label">
+                            <span class="dish__name">Bouchée de homard croustillant</span>
+                            <span class="dish__description">Et sa farandole de petits légumes</span>
+                            <span class="dish__price">35€</span>
+                        </label>  
+                        <input type="checkbox" name="menu" id="foie-gras" value="foie-gras" class="dish__input">
+                    </li>
+                    <li class="dish dish--3">
+                        <label for="eggs" class="dish__label">
+                            <span class="dish__name">Velouté de cèpes</span>
+                            <span class="dish__description">Aux truffes</span>
+                            <span class="dish__price">20€</span>
+                        </label>
+                        <input type="checkbox" name="menu" id="eggs" value="eggs" class="dish__input">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="category category--main">
+                <legend class="category__legend">Plats</legend>
+                <ul class="category__list">
+                    <li class="dish dish--4">
+                        <label for="beef" class="dish__label">
+                            <span class="dish__name">Poulet rôti aux herbes de Provence</span>
+                            <span class="dish__description">Et sa crème de truffe</span>
+                            <span class="dish__price">40€</span>
+                        </label>
+                        <input type="checkbox" name="menu" id="beef" value="beef" class="dish__input">
+                    </li>
+                    <li class="dish dish--5">
+                        <label for="parmentier" class="dish__label">
+                            <span class="dish__name">Langouste rôtie</span>
+                            <span class="dish__description">Et ses légumes de saison</span>
+                            <span class="dish__price">35€</span> 
+                        </label>
+                        <input type="checkbox" name="menu" id="parmentier" value="parmentier" class="dish__input">
+                    </li>
+                    <li class="dish dish--6">
+                        <label for="turbot" class="dish__label">
+                            <span class="dish__name">Côte de boeuf Angus</span>
+                            <span class="dish__description">Et sa purée de panais</span>
+                            <span class="dish__price">44€</span> 
+                        </label>
+                        <input type="checkbox" name="menu" id="turbot" value="turbot" class="dish__input">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="category category--dessert">
+                <legend class="category__legend">Desserts</legend>
+                <ul class="category__list">
+                    <li class="dish dish--7">
+                        <label for="paris-brest" class="dish__label">
+                            <span class="dish__name">Farandole de desserts</span>
+                            <span class="dish__description">Du chef</span>
+                            <span class="dish__price">18€</span>
+                        </label>
+                        <input type="checkbox" name="menu" id="paris-brest" value="paris-brest" class="dish__input">
+                    </li>
+                    <li class="dish dish--8">
+                        <label for="macaron" class="dish__label">
+                            <span class="dish__name">Crème brulée</span>
+                            <span class="dish__description">Revisitée</span>
+                            <span class="dish__price">22€</span> 
+                        </label>
+                        <input type="checkbox" name="menu" id="macaron" value="macaron" class="dish__input">
+                    </li>
+                    <li class="dish dish--9">         
+                        <label for="mousse" class="dish__label">
+                            <span class="dish__name">Tiramisu</span>
+                            <span class="dish__description">À la noisette</span>
+                            <span class="dish__price">23€</span>
+                        </label>
+                        <input type="checkbox" name="menu" id="mousse" value="mousse" class="dish__input">
+                    </li>
+                </ul>
+            </fieldset>
+            <button class="menu__button button">Commander</button>  
+        </form>  
+    </main>
+    <footer class="footer footer--restaurant">
+        <h2 class="footer__heading">ohmyfood</h2>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__link nav__link--business"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li class="nav__link nav__link--business"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li class="nav__link"><a href="#">Mentions légales</a></li>
+                <li class="nav__link"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
