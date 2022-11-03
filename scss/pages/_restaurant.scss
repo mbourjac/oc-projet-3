@@ -25,9 +25,16 @@
         }
 
         @include desktop {
+            --menu-height: 570.4px;
             width: min-value($content-width, desktop-large);
-            height: max(100vh - ($header-height + $main-padding-top + $main-gap-max + $menu-height + $main-padding-bottom + $footer-height), $banner-height);
+            height: max(100vh - ($header-height + $main-padding-top + $main-gap-max + var(--menu-height) + $main-padding-bottom + $footer-height), $banner-height);
             margin: 0 auto;
+        }
+
+        &--extra {
+            @include desktop {
+                --menu-height: 661.2px;
+            }
         }
     }
 }
@@ -151,7 +158,7 @@
     overflow: hidden;
     animation: 1s both slide-up;
 
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         &--#{$i} {
             animation-delay: $i * 0.15s;
         }
