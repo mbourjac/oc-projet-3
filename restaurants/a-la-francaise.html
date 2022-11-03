@@ -18,7 +18,17 @@
         <h1 class="header__heading">ohmyfood</h1>
     </header>
     <main class="restaurant">
-        <img src="../images/restaurants/3.jpg" alt="" class="restaurant__image">
+        <img srcset="../images/restaurants/small/3.jpg 500w,
+                     ../images/restaurants/medium/3.jpg 1000w,
+                     ../images/restaurants/large/3.jpg 2000w,
+                     ../images/restaurants/xlarge/3.jpg 3936w"
+             sizes="(max-width: 767px) 100vw,
+                    (max-width: 1279px) calc(1128px * 3936 / 2624),
+                    (max-width: 1919px) 89.3vw,
+                    1714.57px"
+             src="../images/restaurants/small/3.jpg"
+             alt="À la française"
+             class="restaurant__image">
         <form class="menu">
             <h2 class="menu__heading">
                 À la française

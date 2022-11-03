@@ -18,7 +18,17 @@
         <h1 class="header__heading">ohmyfood</h1>
     </header>
     <main class="restaurant">
-        <img src="../images/restaurants/1.jpg" alt="" class="restaurant__image">
+        <img srcset="../images/restaurants/small/1.jpg 500w,
+                     ../images/restaurants/medium/1.jpg 1000w,
+                     ../images/restaurants/large/1.jpg 2000w,
+                     ../images/restaurants/xlarge/1.jpg 4402w"
+             sizes="(max-width: 767px) 100vw,
+                    (max-width: 1279px) calc(1128px * 4402 / 2935),
+                    (max-width: 1919px) 89.3vw,
+                    1714.57px"
+             src="../images/restaurants/small/1.jpg"
+             alt="La palette du goût"
+             class="restaurant__image">
         <form class="menu">
             <h2 class="menu__heading">
                 La palette du goût

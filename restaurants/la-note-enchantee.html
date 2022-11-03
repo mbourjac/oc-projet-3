@@ -18,7 +18,17 @@
         <h1 class="header__heading">ohmyfood</h1>
     </header>
     <main class="restaurant">
-        <img src="../images/restaurants/2.jpg" alt="" class="restaurant__image restaurant__image--extra">
+        <img srcset="../images/restaurants/small/2.jpg 500w,
+                     ../images/restaurants/medium/2.jpg 1000w,
+                     ../images/restaurants/large/2.jpg 2000w,
+                     ../images/restaurants/xlarge/2.jpg 3024w"
+             sizes="(max-width: 767px) 100vw,
+                    (max-width: 1279px) calc(1210.8px * 3024 / 3780),
+                    (max-width: 1919px) 89.3vw,
+                    1714.57px"
+             src="../images/restaurants/small/2.jpg"
+             alt="La note enchantée"
+             class="restaurant__image restaurant__image--extra">
         <form class="menu">
             <h2 class="menu__heading">
                 La note enchantée
