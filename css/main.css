@@ -413,8 +413,8 @@ fieldset {
 }
 
 .body--home {
-  -webkit-animation: hide 0.1s 4.5s both;
-          animation: hide 0.1s 4.5s both;
+  -webkit-animation: hide 0.1s 2.9s both;
+          animation: hide 0.1s 2.9s both;
 }
 
 .home {
