@@ -1,3 +1,9 @@
+.body {
+    &--home {
+        animation: hide 0.1s 2.4s both;
+    }
+}
+
 .home {
     @include grid-column(0);
     padding-bottom: $main-padding-bottom;

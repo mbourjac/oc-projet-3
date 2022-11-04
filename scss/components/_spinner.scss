@@ -1,0 +1,19 @@
+.spinner {
+    @include flex-center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: #FFF;
+    animation: fade-out 0.5s 2s forwards;
+
+    &::after {
+        @include circle(80px);
+        content: "";
+        border: $spinner-border solid $tertiary-color;
+        border-top: $spinner-border solid transparent;
+        animation: loading 1.5s linear infinite;
+    }
+}
