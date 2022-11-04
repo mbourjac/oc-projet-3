@@ -1,34 +1,7 @@
-@keyframes up {
-    0% {
-        transform: translateY(40%);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 0;
-    }
-}
-
-@keyframes down {
-    0% {
-        transform: translateY(-40%);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 0;
+@keyframes loading {
+    15% {
+        fill: $primary-color;
+        stroke-dashoffset: 0;
     }
 }
 
