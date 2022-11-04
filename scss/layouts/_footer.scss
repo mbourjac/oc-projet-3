@@ -5,22 +5,15 @@
     text-align: left;
 
     > * {
-        @include content-width; 
+        width: min-value($content-width, desktop-large);
         padding: 0 5px;
+        margin: 0 auto;
     }
 
     &__heading {
         margin-bottom: 20px;
         font-family: $heading-font;
         font-size: to-rem(18px);
-    }
-
-    &--restaurant {
-        @include mobile-only {
-            > * {
-                width: $content-width;
-            }
-        }
     }
 }
 

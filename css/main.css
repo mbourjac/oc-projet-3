@@ -332,8 +332,7 @@ fieldset {
   background: linear-gradient(175deg, #FF79DA 3%, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  color: transparent;
 }
 
 .header {
@@ -382,24 +381,14 @@ fieldset {
   text-align: left;
 }
 .footer > * {
-  width: min(89.3%, 428.64px);
-  margin: 0 auto;
+  width: min(89.3%, 1714.56px);
   padding: 0 5px;
-}
-@media screen and (min-width: 768px) {
-  .footer > * {
-    width: min(89.3%, 1714.56px);
-  }
+  margin: 0 auto;
 }
 .footer__heading {
   margin-bottom: 20px;
   font-family: "Shrikhand", cursive;
   font-size: 1.125rem;
-}
-@media screen and (max-width: 767px) {
-  .footer--restaurant > * {
-    width: 89.3%;
-  }
 }
 
 .nav__list {
