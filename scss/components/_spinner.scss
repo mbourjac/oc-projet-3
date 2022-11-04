@@ -7,13 +7,29 @@
     height: 100vh;
     z-index: 3;
     background-color: #FFF;
-    animation: fade-out 0.5s 2s forwards;
+    animation: fade-out 0.5s 4.5s forwards;
 
-    &::after {
-        @include circle(80px);
-        content: "";
-        border: $spinner-border solid $tertiary-color;
-        border-top: $spinner-border solid transparent;
-        animation: loading 1.5s linear infinite;
+    &__svg {
+        width: min(50vw, 250px);
+    }  
+}
+
+.group {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+
+    @for $i from 0 through 2 {
+        &--#{$i} {
+            @if ($i == 1) {
+                animation-name: down;
+            } @else {
+                animation-name: up;
+            }
+
+            animation-duration: 2.4s;
+            animation-delay: $i * 0.5s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
     }
 }
