@@ -1,7 +1,10 @@
 @keyframes loading {
-    15% {
-        fill: $primary-color;
+    30%, 60% {
         stroke-dashoffset: 0;
+    }
+
+    35%, 65% {
+        fill: $primary-color;
     }
 }
 

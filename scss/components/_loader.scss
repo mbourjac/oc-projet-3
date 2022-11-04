@@ -7,11 +7,11 @@
     height: 100vh;
     z-index: 3;
     background-color: #FFF;
-    animation: fade-out 0.4s 4.2s forwards; 
+    animation: fade-out 0.6s 2.4s forwards;
 }
 
 .object {
-    width: min(50vw, 250px);
+    width: min(50vw, 350px);
 }
 
 .svg {
@@ -23,7 +23,7 @@
     
         @for $i from 0 through 7 {
             &--#{$i} {
-                animation: loading 4s $i*0.2s linear infinite;
+                animation: loading 3.4s $i*0.2s linear infinite;
             }
         }
     }

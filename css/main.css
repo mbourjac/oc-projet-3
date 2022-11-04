@@ -1,13 +1,17 @@
 @-webkit-keyframes loading {
-  15% {
-    fill: #9356DC;
+  30%, 60% {
     stroke-dashoffset: 0;
+  }
+  35%, 65% {
+    fill: #9356DC;
   }
 }
 @keyframes loading {
-  15% {
-    fill: #9356DC;
+  30%, 60% {
     stroke-dashoffset: 0;
+  }
+  35%, 65% {
+    fill: #9356DC;
   }
 }
 @-webkit-keyframes fade-out {
@@ -213,12 +217,12 @@ fieldset {
   height: 100vh;
   z-index: 3;
   background-color: #FFF;
-  -webkit-animation: fade-out 0.4s 4.2s forwards;
-          animation: fade-out 0.4s 4.2s forwards;
+  -webkit-animation: fade-out 0.6s 2.4s forwards;
+          animation: fade-out 0.6s 2.4s forwards;
 }
 
 .object {
-  width: min(50vw, 250px);
+  width: min(50vw, 350px);
 }
 
 .svg__path {
@@ -228,36 +232,36 @@ fieldset {
   stroke-dashoffset: 250;
 }
 .svg__path--0 {
-  -webkit-animation: loading 4s 0s linear infinite;
-          animation: loading 4s 0s linear infinite;
+  -webkit-animation: loading 3.4s 0s linear infinite;
+          animation: loading 3.4s 0s linear infinite;
 }
 .svg__path--1 {
-  -webkit-animation: loading 4s 0.2s linear infinite;
-          animation: loading 4s 0.2s linear infinite;
+  -webkit-animation: loading 3.4s 0.2s linear infinite;
+          animation: loading 3.4s 0.2s linear infinite;
 }
 .svg__path--2 {
-  -webkit-animation: loading 4s 0.4s linear infinite;
-          animation: loading 4s 0.4s linear infinite;
+  -webkit-animation: loading 3.4s 0.4s linear infinite;
+          animation: loading 3.4s 0.4s linear infinite;
 }
 .svg__path--3 {
-  -webkit-animation: loading 4s 0.6s linear infinite;
-          animation: loading 4s 0.6s linear infinite;
+  -webkit-animation: loading 3.4s 0.6s linear infinite;
+          animation: loading 3.4s 0.6s linear infinite;
 }
 .svg__path--4 {
-  -webkit-animation: loading 4s 0.8s linear infinite;
-          animation: loading 4s 0.8s linear infinite;
+  -webkit-animation: loading 3.4s 0.8s linear infinite;
+          animation: loading 3.4s 0.8s linear infinite;
 }
 .svg__path--5 {
-  -webkit-animation: loading 4s 1s linear infinite;
-          animation: loading 4s 1s linear infinite;
+  -webkit-animation: loading 3.4s 1s linear infinite;
+          animation: loading 3.4s 1s linear infinite;
 }
 .svg__path--6 {
-  -webkit-animation: loading 4s 1.2s linear infinite;
-          animation: loading 4s 1.2s linear infinite;
+  -webkit-animation: loading 3.4s 1.2s linear infinite;
+          animation: loading 3.4s 1.2s linear infinite;
 }
 .svg__path--7 {
-  -webkit-animation: loading 4s 1.4s linear infinite;
-          animation: loading 4s 1.4s linear infinite;
+  -webkit-animation: loading 3.4s 1.4s linear infinite;
+          animation: loading 3.4s 1.4s linear infinite;
 }
 
 .button {
