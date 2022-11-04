@@ -7,22 +7,24 @@
     height: 100vh;
     z-index: 3;
     background-color: #FFF;
-    animation: fade-out 0.4s 4.2s forwards;
+    animation: fade-out 0.4s 4.2s forwards; 
+}
 
-    &__svg {
-        width: min(50vw, 250px);
-    }  
+.object {
+    width: min(50vw, 250px);
+}
 
+.svg {
     &__path {
         fill: transparent;
         stroke: $primary-color;
         stroke-dasharray: 250;
         stroke-dashoffset: 250;
-
-        @for $i from 1 through 8 {
+    
+        @for $i from 0 through 7 {
             &--#{$i} {
                 animation: loading 4s $i*0.2s linear infinite;
             }
         }
     }
-}
+}  

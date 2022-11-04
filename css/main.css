@@ -216,46 +216,48 @@ fieldset {
   -webkit-animation: fade-out 0.4s 4.2s forwards;
           animation: fade-out 0.4s 4.2s forwards;
 }
-.loader__svg {
+
+.object {
   width: min(50vw, 250px);
 }
-.loader__path {
+
+.svg__path {
   fill: transparent;
   stroke: #9356DC;
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
 }
-.loader__path--1 {
+.svg__path--0 {
+  -webkit-animation: loading 4s 0s linear infinite;
+          animation: loading 4s 0s linear infinite;
+}
+.svg__path--1 {
   -webkit-animation: loading 4s 0.2s linear infinite;
           animation: loading 4s 0.2s linear infinite;
 }
-.loader__path--2 {
+.svg__path--2 {
   -webkit-animation: loading 4s 0.4s linear infinite;
           animation: loading 4s 0.4s linear infinite;
 }
-.loader__path--3 {
+.svg__path--3 {
   -webkit-animation: loading 4s 0.6s linear infinite;
           animation: loading 4s 0.6s linear infinite;
 }
-.loader__path--4 {
+.svg__path--4 {
   -webkit-animation: loading 4s 0.8s linear infinite;
           animation: loading 4s 0.8s linear infinite;
 }
-.loader__path--5 {
+.svg__path--5 {
   -webkit-animation: loading 4s 1s linear infinite;
           animation: loading 4s 1s linear infinite;
 }
-.loader__path--6 {
+.svg__path--6 {
   -webkit-animation: loading 4s 1.2s linear infinite;
           animation: loading 4s 1.2s linear infinite;
 }
-.loader__path--7 {
+.svg__path--7 {
   -webkit-animation: loading 4s 1.4s linear infinite;
           animation: loading 4s 1.4s linear infinite;
-}
-.loader__path--8 {
-  -webkit-animation: loading 4s 1.6s linear infinite;
-          animation: loading 4s 1.6s linear infinite;
 }
 
 .button {
