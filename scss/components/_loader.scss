@@ -1,0 +1,30 @@
+.loader {
+    @include flex-center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: #FFF;
+    animation: fade-out 0.6s 2.4s forwards;
+}
+
+.object {
+    width: min(50vw, 350px);
+}
+
+.svg {
+    &__path {
+        fill: transparent;
+        stroke: $primary-color;
+        stroke-dasharray: 250;
+        stroke-dashoffset: 250;
+    
+        @for $i from 0 through 7 {
+            &--#{$i} {
+                animation: loading 3.4s $i*0.2s linear infinite;
+            }
+        }
+    }
+}  
