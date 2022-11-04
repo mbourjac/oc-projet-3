@@ -321,6 +321,7 @@ fieldset {
   background-color: #F7F7F7;
 }
 .fa-heart::after {
+  content: "\f004";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -328,7 +329,6 @@ fieldset {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f004";
   background: linear-gradient(175deg, #FF79DA 3%, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -1069,6 +1069,7 @@ fieldset {
           transition-duration: 0.5s;
 }
 .dish__input::before {
+  content: "\f058";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -1076,7 +1077,6 @@ fieldset {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f058";
   color: #FFF;
   font-size: 1.25rem;
   margin-left: 1.25rem;

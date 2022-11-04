@@ -109,7 +109,8 @@
     overflow: hidden;
 }
 
-@mixin icon {
+@mixin icon($content) {
+    content: $content;
     display: inline-block;
     font-style: normal;
     font-variant: normal;

@@ -215,8 +215,7 @@
         transition-duration: 0.5s;
         
         &::before {
-            @include icon;
-            content: "\f058";
+            @include icon("\f058");
             color: #FFF;
             font-size: to-rem(20px);
             margin-left: to-rem(20px);

@@ -9,8 +9,7 @@
     }
 
     &::after {
-        @include icon;
-        content: "\f004";
+        @include icon("\f004");
         background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
         background-clip: text;
         color: transparent;
