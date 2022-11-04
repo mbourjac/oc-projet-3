@@ -26,6 +26,11 @@
     @return $image-height;
 }
 
+@function banner-height($menu-height) {
+    $banner-height: max(100vh - ($header-height + $main-padding-top + $main-gap-max + $menu-height + $main-padding-bottom + $footer-height), $banner-height-min);
+    @return $banner-height;
+}
+
 @function to-rem($px-value) {
     $unitless-value: unitless($px-value);
     $rem-value: math.div($unitless-value * 1rem, 16);

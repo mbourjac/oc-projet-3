@@ -14,9 +14,9 @@
         padding: $main-padding-top 0 $main-padding-bottom;
     }
 
-    &__image {
+    &__banner {
         width: 100%;
-        height: $banner-height;
+        height: $banner-height-min;
         object-fit: cover;
 
         @include tablet {
@@ -25,15 +25,14 @@
         }
 
         @include desktop {
-            --menu-height: 570.4px;
             width: min-value($content-width, desktop-large);
-            height: max(100vh - ($header-height + $main-padding-top + $main-gap-max + var(--menu-height) + $main-padding-bottom + $footer-height), $banner-height);
+            height: banner-height(570.4px);
             margin: 0 auto;
         }
 
         &--extra {
             @include desktop {
-                --menu-height: 661.2px;
+                height: banner-height(661.2px);
             }
         }
     }
