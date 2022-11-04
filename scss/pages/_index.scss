@@ -56,11 +56,19 @@
         }
 
         .fa-location-dot {
+            @include opacity-transition($hover: false);
             grid-area: icon;
             justify-self: end;
             color: darken($grey, 76%);
-            transform-origin: 7px 6px;
-            transition: all 0.35s ease-in-out;
+
+            &::after {
+                content: "\f3c5";
+                color: $primary-color;
+                background-color: darken($grey, 5%);
+                transform: scale(1);
+                transform-origin: 7px 6px;
+                transition: all 0.35s ease-in-out;
+            }
         }
     }
 
@@ -79,8 +87,8 @@
         &:focus {
             outline: transparent;
 
-            + .fa-location-dot {
-                color: $primary-color;
+            + .fa-location-dot::after {
+                opacity: 1;
                 transform: scale(1.2);
             }
         }

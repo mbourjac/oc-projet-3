@@ -482,9 +482,27 @@ fieldset {
   }
 }
 .search__location .fa-location-dot {
+  position: relative;
   grid-area: icon;
   justify-self: end;
   color: #353535;
+}
+.search__location .fa-location-dot::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.search__location .fa-location-dot::after {
+  content: "\f3c5";
+  color: #9356DC;
+  background-color: #eaeaea;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transform-origin: 7px 6px;
           transform-origin: 7px 6px;
   -webkit-transition: all 0.35s ease-in-out;
@@ -524,8 +542,8 @@ fieldset {
 .search__input:focus {
   outline: transparent;
 }
-.search__input:focus + .fa-location-dot {
-  color: #9356DC;
+.search__input:focus + .fa-location-dot::after {
+  opacity: 1;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
