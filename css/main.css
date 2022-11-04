@@ -196,7 +196,7 @@ fieldset {
   border: none;
 }
 
-.spinner {
+.loader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,44 +216,44 @@ fieldset {
   -webkit-animation: fade-out 0.4s 4.2s forwards;
           animation: fade-out 0.4s 4.2s forwards;
 }
-.spinner__svg {
+.loader__svg {
   width: min(50vw, 250px);
 }
-.spinner__path {
+.loader__path {
   fill: transparent;
   stroke: #9356DC;
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
 }
-.spinner__path--1 {
+.loader__path--1 {
   -webkit-animation: loading 4s 0.2s linear infinite;
           animation: loading 4s 0.2s linear infinite;
 }
-.spinner__path--2 {
+.loader__path--2 {
   -webkit-animation: loading 4s 0.4s linear infinite;
           animation: loading 4s 0.4s linear infinite;
 }
-.spinner__path--3 {
+.loader__path--3 {
   -webkit-animation: loading 4s 0.6s linear infinite;
           animation: loading 4s 0.6s linear infinite;
 }
-.spinner__path--4 {
+.loader__path--4 {
   -webkit-animation: loading 4s 0.8s linear infinite;
           animation: loading 4s 0.8s linear infinite;
 }
-.spinner__path--5 {
+.loader__path--5 {
   -webkit-animation: loading 4s 1s linear infinite;
           animation: loading 4s 1s linear infinite;
 }
-.spinner__path--6 {
+.loader__path--6 {
   -webkit-animation: loading 4s 1.2s linear infinite;
           animation: loading 4s 1.2s linear infinite;
 }
-.spinner__path--7 {
+.loader__path--7 {
   -webkit-animation: loading 4s 1.4s linear infinite;
           animation: loading 4s 1.4s linear infinite;
 }
-.spinner__path--8 {
+.loader__path--8 {
   -webkit-animation: loading 4s 1.6s linear infinite;
           animation: loading 4s 1.6s linear infinite;
 }
