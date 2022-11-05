@@ -265,8 +265,6 @@ fieldset {
 }
 
 .button {
-  position: relative;
-  z-index: 1;
   height: 3.125rem;
   padding: 15px 20px;
   border: none;
@@ -277,25 +275,14 @@ fieldset {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
-.button:hover::after {
-  opacity: 1;
-}
-.button::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: "";
-  z-index: -1;
-  border-radius: 1.5625rem;
-  background: linear-gradient(175deg, #ff88de 3%, #9b63df);
+.button:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  -webkit-transition: opacity 0.35s;
-  transition: opacity 0.35s;
+  -webkit-filter: brightness(1.05);
+          filter: brightness(1.05);
 }
 
 .fa-heart {

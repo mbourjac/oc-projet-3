@@ -1,6 +1,4 @@
 .button {
-    position: relative;
-    z-index: 1;
     height: to-rem(50px);
     padding: 15px 20px;
     border: none;
@@ -10,25 +8,10 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-weight: $font-weight-medium;
     cursor: pointer;
+    transition: all 0.35s;
 
     &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    &::after {
-        @include absolute-cover;
-        content: "";
-        z-index: -1;
-        border-radius: to-rem(25px);
-        background: linear-gradient(
-            175deg,
-            lighten($secondary-color, 3%) 3%, 
-            lighten($primary-color, 3%)
-        );
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        opacity: 0;
-        transition: opacity 0.35s;
+        filter: brightness(1.05);
     }
 }
