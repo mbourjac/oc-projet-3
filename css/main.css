@@ -265,22 +265,28 @@ fieldset {
 }
 
 .button {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
   height: 3.125rem;
   padding: 15px 20px;
   border: none;
   border-radius: 1.5625rem;
   color: #FFF;
   background: linear-gradient(175deg, #FF79DA 3%, #9356DC);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   font-weight: 500;
-  cursor: pointer;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 .button:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.button:hover {
   -webkit-filter: brightness(1.05);
           filter: brightness(1.05);
 }
