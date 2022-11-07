@@ -7,7 +7,8 @@
     color: #FFF;
     background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
     font-weight: $font-weight-medium;
-    transition: all 0.35s;
+    filter: brightness(1);
+    transition: box-shadow 0.4s, filter 0.35s;
 
     &:hover {
         filter: brightness(1.05);

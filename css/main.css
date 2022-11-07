@@ -279,8 +279,12 @@ fieldset {
   color: #FFF;
   background: linear-gradient(175deg, #FF79DA 3%, #9356DC);
   font-weight: 500;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transition: -webkit-box-shadow 0.4s, -webkit-filter 0.35s;
+  transition: -webkit-box-shadow 0.4s, -webkit-filter 0.35s;
+  transition: box-shadow 0.4s, filter 0.35s;
+  transition: box-shadow 0.4s, filter 0.35s, -webkit-box-shadow 0.4s, -webkit-filter 0.35s;
 }
 .button:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
