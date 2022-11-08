@@ -72,24 +72,6 @@
     }
 }
 
-@mixin opacity-transition($duration: 0.5s, $easing: ease, $hover: true) {
-    position: relative;
-
-    @if ($hover) {
-        &:hover {
-            &::after {
-                opacity: 1;
-            } 
-        }
-    }
-
-    &::after {
-        @include absolute-cover;
-        opacity: 0;
-        transition: opacity $duration $easing;
-    }
-}
-
 @mixin box-shadow($opacity: 0.2, $hover: true) {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,$opacity);
 

@@ -1,17 +1,21 @@
 .fa-heart {
-    @include opacity-transition;
+    position: relative;
     color: darken($grey, 50%);
-    background-color: #FFF;
     cursor: pointer;
 
-    &--restaurant {
-        background-color: $grey;
+    &:hover {
+        &::after {
+            opacity: 1;
+        } 
     }
 
     &::after {
         @include icon("\f004");
+        @include absolute-cover;
         background: linear-gradient(175deg, $secondary-color 3%, $primary-color);
         background-clip: text;
         color: transparent;
+        opacity: 0;
+        transition: opacity 0.5s;
     }
 }

@@ -298,24 +298,10 @@ fieldset {
 .fa-heart {
   position: relative;
   color: #787878;
-  background-color: #FFF;
   cursor: pointer;
 }
 .fa-heart:hover::after {
   opacity: 1;
-}
-.fa-heart::after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-.fa-heart--restaurant {
-  background-color: #F7F7F7;
 }
 .fa-heart::after {
   content: "\f004";
@@ -326,10 +312,18 @@ fieldset {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background: linear-gradient(175deg, #FF79DA 3%, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .header {
