@@ -409,9 +409,6 @@ fieldset {
 }
 
 .home {
-  display: grid;
-  grid-template-rows: auto;
-  gap: 0;
   padding-bottom: 64px;
 }
 @media screen and (min-width: 768px) {

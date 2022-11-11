@@ -5,7 +5,6 @@
 }
 
 .home {
-    @include grid-column(0);
     padding-bottom: $main-padding-bottom;
 
     @include tablet {
@@ -25,7 +24,7 @@
         grid-template-areas: 
             "search restaurants"
             "description restaurants";
-            gap: $main-gap-max;
+        gap: $main-gap-max;
     }
 }
 
