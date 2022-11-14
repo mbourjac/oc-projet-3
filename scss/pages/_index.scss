@@ -212,7 +212,7 @@
         @include grid-column(18px);
 
         @include tablet {
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
             gap: $main-gap;
         }
 
