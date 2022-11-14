@@ -18,8 +18,8 @@
     &__path {
         fill: transparent;
         stroke: $primary-color;
-        stroke-dasharray: 250;
-        stroke-dashoffset: 250;
+        stroke-dasharray: 2;
+        stroke-dashoffset: 2;
     
         @for $i from 0 through 7 {
             &--#{$i} {
