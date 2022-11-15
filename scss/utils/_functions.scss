@@ -16,7 +16,7 @@
         @return $container-width;
     } 
 
-    $total-gap: $container-gap * ($columns - 1);
+    $total-gap: ($container-gap * ($columns - 1));
     $image-width: calc(($container-width - $total-gap) / $columns);
     @return $image-width;
 }

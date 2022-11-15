@@ -245,7 +245,7 @@
         top: $new-positioning;
         right: $new-positioning;
         padding: 8px 12px;
-        border-radius: $main-border-radius - $new-positioning;
+        border-radius: ($main-border-radius - $new-positioning);
         color: darken($tertiary-color, 50%);
         background-color: $tertiary-color;
         animation: pulse 3s ease-in-out infinite;
