@@ -78,7 +78,6 @@
             position: absolute;
             top: 0;
             right: 0;
-            font-size: to-rem(24px);
         }
     }
 
@@ -217,8 +216,8 @@
         &::before {
             @include icon("\f058");
             color: #FFF;
-            font-size: to-rem(20px);
-            margin-left: to-rem(20px);
+            font-size: to-rem($input-icon-font-size);
+            margin-left: to-rem($input-icon-margin);
         }
 
         &:checked {

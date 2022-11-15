@@ -34,12 +34,20 @@ $image-container-width: 89.3vw;
 $image-ratio: math.div(174, 335);
 $side-panel: 400px;
 
+$new-positioning: 13px;
+$like-font-size: 24px;
+$card-vertical-margin-big: 18px;
+$card-vertical-margin-small: 5px;
+$card-horizontal-margin-big: $like-font-size;
+$card-horizontal-margin-small: math.div($like-font-size, 2);
+
 $banner-height-min: 257px;
 $menu-padding-top: $main-border-radius-large;
 $menu-margin-top: -$main-border-radius-large;
 $menu-horizontal-spacing: 2.16vw;
 $input-width: 60px;
-$input-icon-height: 20px;
+$input-icon-font-size: math.div($input-width, 3);
+$input-icon-margin: $input-icon-font-size;
 
 $header-height: 66.8px;
 $footer-height: 198.3px;

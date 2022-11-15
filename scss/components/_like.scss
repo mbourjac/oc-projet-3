@@ -1,6 +1,7 @@
 .fa-heart {
     position: relative;
     color: darken($grey, 50%);
+    font-size: to-rem($like-font-size);
     cursor: pointer;
 
     &:hover {

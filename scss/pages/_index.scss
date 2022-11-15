@@ -242,10 +242,10 @@
     &__new {
         @include box-shadow($hover: false);
         position: absolute;
-        top: 13px;
-        right: 13px;
+        top: $new-positioning;
+        right: $new-positioning;
         padding: 8px 12px;
-        border-radius: 2px;
+        border-radius: $main-border-radius - $new-positioning;
         color: darken($tertiary-color, 50%);
         background-color: $tertiary-color;
         animation: pulse 3s ease-in-out infinite;
@@ -256,7 +256,7 @@
         grid-area: image;
         width: 100%;
         height: min-value(image-height(1), mobile);
-        margin-bottom: 18px;
+        margin-bottom: $card-vertical-margin-big;
         object-fit: cover;
         object-position: bottom;
 
@@ -283,18 +283,17 @@
 
     &__heading {
         grid-area: heading;
-        margin: 0 0 5px 12px;
+        margin: 0 0 $card-vertical-margin-small $card-horizontal-margin-small;
     }
 
     .fa-heart {
         grid-area: icon;
-        margin: 5px 24px 0;
-        font-size: to-rem(24px);
+        margin: $card-vertical-margin-small $card-horizontal-margin-big 0;
     }
 
     &__location {
         grid-area: location;
-        margin: 0 0 18px 12px;
+        margin: 0 0 $card-vertical-margin-big $card-horizontal-margin-small;
         font-weight: $font-weight-light;
     }
 }

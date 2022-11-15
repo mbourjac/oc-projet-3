@@ -298,6 +298,7 @@ fieldset {
 .fa-heart {
   position: relative;
   color: #787878;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .fa-heart:hover::after {
@@ -772,7 +773,6 @@ fieldset {
 .restaurant-card .fa-heart {
   grid-area: icon;
   margin: 5px 24px 0;
-  font-size: 1.5rem;
 }
 .restaurant-card__location {
   grid-area: location;
@@ -869,7 +869,6 @@ fieldset {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.5rem;
 }
 .menu__button {
   padding: 15px 48px;
