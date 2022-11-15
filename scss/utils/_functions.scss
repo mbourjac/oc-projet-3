@@ -12,7 +12,7 @@
 }
 
 @function image-width($columns, $container-gap, $container-width) {
-    @if ($columns == 1) {
+    @if $columns == 1 {
         @return $container-width;
     } 
 

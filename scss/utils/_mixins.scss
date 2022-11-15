@@ -63,9 +63,9 @@
 }
 
 @mixin border-radius($sides: "all", $border-radius: $main-border-radius) {
-    @if ($sides == "top") {
+    @if $sides == "top" {
         border-radius: $border-radius $border-radius 0 0;
-    } @else if ($sides == "right") {
+    } @else if $sides == "right" {
         border-radius: 0 $border-radius $border-radius 0;
     } @else {
         border-radius: $border-radius;
@@ -75,7 +75,7 @@
 @mixin box-shadow($opacity: 0.2, $hover: true) {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,$opacity);
 
-    @if ($hover) {
+    @if $hover {
         cursor: pointer;
         transition: box-shadow 0.4s;
 
