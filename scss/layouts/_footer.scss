@@ -5,7 +5,7 @@
     text-align: left;
 
     > * {
-        width: min-value($content-width, desktop-large);
+        width: min-value($content-width, "desktop-large");
         padding: 0 5px;
         margin: 0 auto;
     }

@@ -27,7 +27,7 @@
         }
 
         @include desktop {
-            margin-left: calc((100vw - min-value(89.3vw, desktop-large)) / 2);
+            margin-left: calc((100vw - min-value(89.3vw, "desktop-large")) / 2);
         }
 
         &:hover {

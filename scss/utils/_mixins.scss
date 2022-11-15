@@ -1,17 +1,17 @@
 @mixin mobile-only {
-    @media screen and (max-width: calc(map-get($breakpoints, tablet) - 1px)) {
+    @media screen and (max-width: calc(map-get($breakpoints, "tablet") - 1px)) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @media screen and (min-width: map-get($breakpoints, "tablet")) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-width: map-get($breakpoints, "desktop")) {
         @content;
     }
 }
@@ -54,18 +54,18 @@
 }
 
 @mixin content-width($width: $content-width) {
-    width: min-value($width, mobile);
+    width: min-value($width, "mobile");
     margin: 0 auto;
 
     @include tablet {
-        width: min-value($width, desktop-large);
+        width: min-value($width, "desktop-large");
     }
 }
 
-@mixin border-radius($sides: all, $border-radius: $main-border-radius) {
-    @if ($sides == top) {
+@mixin border-radius($sides: "all", $border-radius: $main-border-radius) {
+    @if ($sides == "top") {
         border-radius: $border-radius $border-radius 0 0;
-    } @else if ($sides == right) {
+    } @else if ($sides == "right") {
         border-radius: 0 $border-radius $border-radius 0;
     } @else {
         border-radius: $border-radius;

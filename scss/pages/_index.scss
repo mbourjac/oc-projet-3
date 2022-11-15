@@ -51,7 +51,7 @@
         margin-bottom: 40px;
 
         @include tablet {
-            @include border-radius(top);
+            @include border-radius("top");
         }
 
         .fa-location-dot {
@@ -252,10 +252,10 @@
     }
 
     &__image {
-        @include border-radius(top);
+        @include border-radius("top");
         grid-area: image;
         width: 100%;
-        height: min-value(image-height(1), mobile);
+        height: min-value(image-height(1), "mobile");
         margin-bottom: $card-vertical-margin-big;
         object-fit: cover;
         object-position: bottom;
@@ -273,7 +273,7 @@
         }
 
         @media screen and (min-width: 1675px) {
-            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - ($side-panel + $main-gap-max)));
+            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, "desktop-large") - ($side-panel + $main-gap-max)));
         }
 
         &--position {

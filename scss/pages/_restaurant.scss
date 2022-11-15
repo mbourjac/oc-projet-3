@@ -25,7 +25,7 @@
         }
 
         @include desktop {
-            width: min-value($content-width, desktop-large);
+            width: min-value($content-width, "desktop-large");
             height: banner-height(570.4px);
             margin: 0 auto;
         }
@@ -40,7 +40,7 @@
 
 .menu {
     @include grid-column;
-    @include border-radius(top, $main-border-radius-large);
+    @include border-radius("top", $main-border-radius-large);
     position: relative;
     padding: $menu-padding-top max(3.46%, 13px) 0;
     margin: $menu-margin-top auto 0;
@@ -58,9 +58,9 @@
             "heading heading heading"
             "starter main dessert"
             ". button .";
-        column-gap: min-value($menu-horizontal-spacing, desktop-large);
-        width: min-value($content-width, desktop-large);
-        padding: $menu-padding-top min-value($menu-horizontal-spacing, desktop-large) 0;
+        column-gap: min-value($menu-horizontal-spacing, "desktop-large");
+        width: min-value($content-width, "desktop-large");
+        padding: $menu-padding-top min-value($menu-horizontal-spacing, "desktop-large") 0;
     }
     
     &__heading {
@@ -203,7 +203,7 @@
     }
 
     &__input {
-        @include border-radius(right);
+        @include border-radius("right");
         display: flex;
         align-items: center;
         flex-shrink: 0;
