@@ -5,6 +5,11 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
 
+    &--restaurant {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    }
+
     &__heading {
         margin: 0;
         font-family: $heading-font;
@@ -28,10 +33,5 @@
         &:hover {
             animation: 0.8s shake linear;
         }
-    }
-
-    &--restaurant {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
     }
 }

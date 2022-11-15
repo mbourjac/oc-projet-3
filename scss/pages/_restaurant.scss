@@ -99,6 +99,24 @@
         margin-bottom: 60px;
     }
 
+    &--starter {
+        @include desktop {
+            grid-area: starter;
+        }
+    }
+
+    &--main {
+        @include desktop {
+            grid-area: main;
+        } 
+    }
+
+    &--dessert {
+        @include desktop {
+            grid-area: dessert;
+        }
+    }
+
     &__legend {
         position: relative;
         margin-bottom: 20px;
@@ -128,24 +146,6 @@
             row-gap: 20px;
         }
     }
-
-    &--starter {
-        @include desktop {
-            grid-area: starter;
-        }
-    }
-
-    &--main {
-        @include desktop {
-            grid-area: main;
-        } 
-    }
-
-    &--dessert {
-        @include desktop {
-            grid-area: dessert;
-        }
-    }
 }
 
 .dish {
@@ -156,12 +156,6 @@
     overflow: hidden;
     animation: 1s both slide-up;
 
-    @for $i from 1 through 10 {
-        &--#{$i} {
-            animation-delay: $i * 0.15s;
-        }
-    }
-
     &:hover {
         .dish__input:not(:checked) {
             width: to-rem($input-width);
@@ -169,6 +163,12 @@
             &::before {
                 animation: 0.5s both spin linear;
             }
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: $i * 0.15s;
         }
     }
     

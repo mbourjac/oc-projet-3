@@ -155,13 +155,6 @@
         counter-increment: description;
         transition: all 0.4s;
 
-        i {
-            justify-self: end;
-            width: to-rem(18px);
-            color: darken($grey, 48%);
-            transition: color 0.4s;
-        }
-
         &:hover {
             background-color: lighten($primary-color, 36%);
 
@@ -180,6 +173,13 @@
             color: #FFF;
             background-color: $primary-color;
             font-size: 16px;
+        }
+
+        i {
+            justify-self: end;
+            width: to-rem(18px);
+            color: darken($grey, 48%);
+            transition: color 0.4s;
         }
     }
 }
@@ -260,10 +260,6 @@
         object-fit: cover;
         object-position: bottom;
 
-        &--position {
-            object-position: center 61%;
-        }
-
         @include tablet {
             height: image-height(2);
         }
@@ -279,6 +275,10 @@
         @media screen and (min-width: 1675px) {
             height: image-height(3, $main-gap-max, calc(min-value($image-container-width, desktop-large) - ($side-panel + $main-gap-max)));
         }
+
+        &--position {
+            object-position: center 61%;
+        }
     }
 
     &__heading {
@@ -286,14 +286,14 @@
         margin: 0 0 $card-vertical-margin-small $card-horizontal-margin-small;
     }
 
-    .fa-heart {
-        grid-area: icon;
-        margin: $card-vertical-margin-small $card-horizontal-margin-big 0;
-    }
-
     &__location {
         grid-area: location;
         margin: 0 0 $card-vertical-margin-big $card-horizontal-margin-small;
         font-weight: $font-weight-light;
+    }
+
+    .fa-heart {
+        grid-area: icon;
+        margin: $card-vertical-margin-small $card-horizontal-margin-big 0;
     }
 }

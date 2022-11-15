@@ -335,6 +335,10 @@ fieldset {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+.header--restaurant {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
 .header__heading {
   margin: 0;
   font-family: "Shrikhand", cursive;
@@ -360,10 +364,6 @@ fieldset {
 .header__back:hover {
   -webkit-animation: 0.8s shake linear;
           animation: 0.8s shake linear;
-}
-.header--restaurant {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
 }
 
 .footer {
@@ -393,15 +393,15 @@ fieldset {
           flex-direction: column;
   gap: 0.5rem;
 }
-.nav__link a {
-  color: #FFF;
-}
 .nav__link--business {
   font-weight: 500;
 }
 .nav__link--business i {
   width: 1.25rem;
   margin-right: 0.625rem;
+}
+.nav__link a {
+  color: #FFF;
 }
 
 .body--home {
@@ -612,13 +612,6 @@ fieldset {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.description__item i {
-  justify-self: end;
-  width: 1.125rem;
-  color: #7d7d7d;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
 .description__item:hover {
   background-color: #f4eefc;
 }
@@ -645,6 +638,13 @@ fieldset {
   color: #FFF;
   background-color: #9356DC;
   font-size: 16px;
+}
+.description__item i {
+  justify-self: end;
+  width: 1.125rem;
+  color: #7d7d7d;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
 .restaurants {
@@ -742,10 +742,6 @@ fieldset {
   -o-object-position: bottom;
      object-position: bottom;
 }
-.restaurant-card__image--position {
-  -o-object-position: center 61%;
-     object-position: center 61%;
-}
 @media screen and (min-width: 768px) {
   .restaurant-card__image {
     height: 22.496641791vw;
@@ -766,18 +762,22 @@ fieldset {
     height: calc((min(89.3vw, 1714.56px) - 435px - 70px) / 3 * 0.5194029851);
   }
 }
+.restaurant-card__image--position {
+  -o-object-position: center 61%;
+     object-position: center 61%;
+}
 .restaurant-card__heading {
   grid-area: heading;
   margin: 0 0 5px 12px;
-}
-.restaurant-card .fa-heart {
-  grid-area: icon;
-  margin: 5px 24px 0;
 }
 .restaurant-card__location {
   grid-area: location;
   margin: 0 0 18px 12px;
   font-weight: 300;
+}
+.restaurant-card .fa-heart {
+  grid-area: icon;
+  margin: 5px 24px 0;
 }
 
 .restaurant {
@@ -889,6 +889,21 @@ fieldset {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .category--starter {
+    grid-area: starter;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .category--main {
+    grid-area: main;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .category--dessert {
+    grid-area: dessert;
+  }
+}
 .category__legend {
   position: relative;
   margin-bottom: 20px;
@@ -920,21 +935,6 @@ fieldset {
     row-gap: 20px;
   }
 }
-@media screen and (min-width: 1280px) {
-  .category--starter {
-    grid-area: starter;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .category--main {
-    grid-area: main;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .category--dessert {
-    grid-area: dessert;
-  }
-}
 
 .dish {
   border-radius: 15px;
@@ -956,6 +956,13 @@ fieldset {
 .dish:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.dish:hover .dish__input:not(:checked) {
+  width: 3.75rem;
+}
+.dish:hover .dish__input:not(:checked)::before {
+  -webkit-animation: 0.5s both spin linear;
+          animation: 0.5s both spin linear;
 }
 .dish--1 {
   -webkit-animation-delay: 0.15s;
@@ -996,13 +1003,6 @@ fieldset {
 .dish--10 {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
-}
-.dish:hover .dish__input:not(:checked) {
-  width: 3.75rem;
-}
-.dish:hover .dish__input:not(:checked)::before {
-  -webkit-animation: 0.5s both spin linear;
-          animation: 0.5s both spin linear;
 }
 .dish__label {
   display: grid;
