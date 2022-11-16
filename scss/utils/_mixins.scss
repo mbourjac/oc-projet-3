@@ -1,17 +1,17 @@
 @mixin mobile-only {
-    @media screen and (max-width: calc(map-get($breakpoints, "tablet") - 1px)) {
+    @media screen and (max-width: to-rem(calc(map-get($breakpoints, "tablet") - 1px))) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    @media screen and (min-width: to-rem(map-get($breakpoints, "tablet"))) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, "desktop")) {
+    @media screen and (min-width: to-rem(map-get($breakpoints, "desktop"))) {
         @content;
     }
 }

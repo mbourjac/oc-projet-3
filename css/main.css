@@ -165,7 +165,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   body {
     grid-template-rows: auto 1fr auto;
   }
@@ -351,14 +351,14 @@ fieldset {
   margin-left: max(3.46vw, 13px);
   font-size: 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .header__back {
     margin-left: 5.35vw;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .header__back {
-    margin-left: calc((100vw - min(89.3vw, 1714.56px)) / 2);
+    margin-left: calc((100vw - min(89.3vw, 107.16rem)) / 2);
   }
 }
 .header__back:hover {
@@ -373,7 +373,7 @@ fieldset {
   text-align: left;
 }
 .footer > * {
-  width: min(89.3%, 1714.56px);
+  width: min(89.3%, 107.16rem);
   padding: 0 5px;
   margin: 0 auto;
 }
@@ -412,9 +412,9 @@ fieldset {
 .home {
   padding-bottom: 64px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .home {
-    width: min(89.3%, 428.64px);
+    width: min(89.3%, 26.79rem);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -425,14 +425,14 @@ fieldset {
     padding-top: 45px;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 48rem) and (min-width: 48rem) {
   .home {
-    width: min(89.3%, 1714.56px);
+    width: min(89.3%, 107.16rem);
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .home {
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 25rem 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "search restaurants" "description restaurants";
     gap: 35px;
@@ -442,14 +442,14 @@ fieldset {
 .search {
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .search {
     border-radius: 15px;
     grid-area: search;
     background-color: #FFF;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .search {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -465,7 +465,7 @@ fieldset {
   background-color: #eaeaea;
   margin-bottom: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .search__location {
     border-radius: 15px 15px 0 0;
   }
@@ -525,7 +525,7 @@ fieldset {
   margin: 0 5.35% 30px;
   font-weight: 300;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .search__text {
     margin-bottom: 60px;
   }
@@ -533,7 +533,7 @@ fieldset {
 .search__button {
   margin: 0 5.35% 57px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .search__button {
     margin-bottom: 60px;
   }
@@ -543,14 +543,14 @@ fieldset {
   padding: 50px 0 68px;
   background-color: #FFF;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .description {
     border-radius: 15px;
     grid-area: description;
     padding: 20px 0 30px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .description {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -558,18 +558,18 @@ fieldset {
   }
 }
 .description > * {
-  width: min(89.3%, 428.64px);
+  width: min(89.3%, 26.79rem);
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .description > * {
-    width: min(89.3%, 1714.56px);
+    width: min(89.3%, 107.16rem);
   }
 }
 .description__heading {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .description__heading {
     text-align: center;
   }
@@ -619,8 +619,8 @@ fieldset {
   color: #9356DC;
 }
 .description__item::before {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,11 +633,11 @@ fieldset {
           align-items: center;
   content: counter(description);
   position: absolute;
-  top: calc(50% - 12px);
-  left: -12px;
+  top: calc(50% - 0.75rem);
+  left: -0.75rem;
   color: #FFF;
   background-color: #9356DC;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .description__item i {
   justify-self: end;
@@ -651,26 +651,26 @@ fieldset {
   padding-top: 45px;
   text-align: left;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurants {
     grid-area: restaurants;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurants {
     padding-top: 0;
   }
 }
 .restaurants > * {
-  width: min(89.3%, 428.64px);
+  width: min(89.3%, 26.79rem);
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurants > * {
-    width: min(89.3%, 1714.56px);
+    width: min(89.3%, 107.16rem);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurants > * {
     width: 100%;
   }
@@ -683,13 +683,13 @@ fieldset {
   grid-template-rows: auto;
   gap: 18px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurants__list {
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20.625rem, 1fr));
     gap: 2.675vw;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurants__list {
     gap: 35px;
   }
@@ -735,31 +735,31 @@ fieldset {
   border-radius: 15px 15px 0 0;
   grid-area: image;
   width: 100%;
-  height: min(46.3826865672vw, 222.6368955224px);
+  height: min(46.3826865672vw, 13.9148059701rem);
   margin-bottom: 18px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurant-card__image {
     height: 22.496641791vw;
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 73.75rem) {
   .restaurant-card__image {
     height: 14.5346268657vw;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurant-card__image {
-    height: calc((89.3vw - 435px - 35px) / 2 * 0.5194029851);
+    height: calc((89.3vw - (25rem + 35px) - 35px) / 2 * 0.5194029851);
   }
 }
-@media screen and (min-width: 1675px) {
+@media screen and (min-width: 104.6875rem) {
   .restaurant-card__image {
-    height: calc((min(89.3vw, 1714.56px) - 435px - 70px) / 3 * 0.5194029851);
+    height: calc((min(89.3vw, 107.16rem) - (25rem + 35px) - 70px) / 3 * 0.5194029851);
   }
 }
 .restaurant-card__image--position {
@@ -783,7 +783,7 @@ fieldset {
 .restaurant {
   background-color: #FFF;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurant {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -793,7 +793,7 @@ fieldset {
     padding: 45px 5.35% 64px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurant {
     grid-template-columns: 1fr;
     row-gap: 35px;
@@ -806,20 +806,20 @@ fieldset {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .restaurant__banner {
     height: 100%;
     border-radius: 36px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurant__banner {
-    width: min(89.3%, 1714.56px);
+    width: min(89.3%, 107.16rem);
     height: max(100vh - 979.5px, 257px);
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .restaurant__banner--extra {
     height: max(100vh - 1070.3px, 257px);
   }
@@ -835,22 +835,22 @@ fieldset {
   margin: -36px auto 0;
   background-color: #F7F7F7;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .menu {
     width: 100%;
     margin: 0 auto;
     border-radius: 36px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .menu {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "heading heading heading" "starter main dessert" ". button .";
-    -webkit-column-gap: min(2.16vw, 41.472px);
-       -moz-column-gap: min(2.16vw, 41.472px);
-            column-gap: min(2.16vw, 41.472px);
-    width: min(89.3%, 1714.56px);
-    padding: 36px min(2.16vw, 41.472px) 0;
+    -webkit-column-gap: min(2.16vw, 2.592rem);
+       -moz-column-gap: min(2.16vw, 2.592rem);
+            column-gap: min(2.16vw, 2.592rem);
+    width: min(89.3%, 107.16rem);
+    padding: 36px min(2.16vw, 2.592rem) 0;
   }
 }
 .menu__heading {
@@ -859,7 +859,7 @@ fieldset {
   padding-right: 2.125rem;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .menu__heading {
     grid-area: heading;
     margin-bottom: 38px;
@@ -874,7 +874,7 @@ fieldset {
   padding: 15px 48px;
   margin: 0 auto 40px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .menu__button {
     grid-area: button;
     margin-bottom: 60px;
@@ -884,22 +884,22 @@ fieldset {
 .category {
   margin-bottom: 40px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category {
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category--starter {
     grid-area: starter;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category--main {
     grid-area: main;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category--dessert {
     grid-area: dessert;
   }
@@ -911,7 +911,7 @@ fieldset {
   font-weight: 400;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category__legend {
     margin-bottom: 28px;
   }
@@ -930,7 +930,7 @@ fieldset {
   grid-template-rows: auto;
   gap: 12px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .category__list {
     row-gap: 20px;
   }

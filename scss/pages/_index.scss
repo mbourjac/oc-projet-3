@@ -19,7 +19,7 @@
     }
 
     @include desktop {
-        grid-template-columns: $side-panel 1fr;
+        grid-template-columns: to-rem($side-panel) 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas: 
             "search restaurants"
@@ -164,15 +164,15 @@
         }
 
         &::before {
-            @include circle(24px);
+            @include circle(to-rem(24px));
             @include flex-center;
             content: counter(description);
             position: absolute;
-            top: calc(50% - 12px);
-            left: -12px;
+            top: calc(50% - to-rem(12px));
+            left: to-rem(-12px);
             color: #FFF;
             background-color: $primary-color;
-            font-size: 16px;
+            font-size: to-rem(16px);
         }
 
         i {
@@ -212,7 +212,7 @@
         @include grid-column(18px);
 
         @include tablet {
-            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(to-rem(330px), 1fr));
             gap: $main-gap;
         }
 
@@ -264,16 +264,16 @@
             height: image-height(2);
         }
 
-        @media screen and (min-width: 1180px) {
+        @media screen and (min-width: to-rem(1180px)) {
             height: image-height(3);
         }
 
         @include desktop {
-            height: image-height(2, $main-gap-max, calc($image-container-width - ($side-panel + $main-gap-max)));
+            height: image-height(2, $main-gap-max, calc($image-container-width - (to-rem($side-panel) + $main-gap-max)));
         }
 
-        @media screen and (min-width: 1675px) {
-            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, "desktop-large") - ($side-panel + $main-gap-max)));
+        @media screen and (min-width: to-rem(1675px)) {
+            height: image-height(3, $main-gap-max, calc(min-value($image-container-width, "desktop-large") - (to-rem($side-panel) + $main-gap-max)));
         }
 
         &--position {

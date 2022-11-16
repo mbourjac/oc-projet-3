@@ -3,7 +3,7 @@
 }
 
 @function limit($value, $breakpoint) {
-    @return math.div(unitless($value) * map-get($breakpoints, $breakpoint), 100);
+    @return math.div(unitless($value) * to-rem(map-get($breakpoints, $breakpoint)), 100);
 }
 
 @function min-value($value, $breakpoint) {
