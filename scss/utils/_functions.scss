@@ -32,11 +32,9 @@
 }
 
 @function to-rem($px-value) {
-    $unitless-value: unitless($px-value);
-    $rem-value: math.div($unitless-value * 1rem, 16);
-    @return $rem-value;
+    @return (math.div($px-value, 16px) * 1rem);
 }
 
 @function to-vw($value, $viewport-width) {
-    @return math.div($value, $viewport-width) * 100vw;
+    @return (math.div($value, $viewport-width) * 100vw);
 }
