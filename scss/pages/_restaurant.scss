@@ -150,7 +150,7 @@
 
 .dish {
     @include border-radius;
-    @include box-shadow;
+    @include box-shadow($unique-transition: true);
     display: flex;
     background-color: #FFF;
     overflow: hidden;

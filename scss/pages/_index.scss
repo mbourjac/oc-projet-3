@@ -224,7 +224,7 @@
 
 .restaurant-card {
     @include border-radius;
-    @include box-shadow;
+    @include box-shadow($unique-transition: true);
     position: relative;
     width: 100%;
     margin: 0 auto;

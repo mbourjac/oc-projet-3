@@ -268,10 +268,6 @@ fieldset {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 0.4s;
-  transition: -webkit-box-shadow 0.4s;
-  transition: box-shadow 0.4s;
-  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
   height: 3.125rem;
   padding: 15px 20px;
   border: none;
@@ -586,10 +582,6 @@ fieldset {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  -webkit-transition: -webkit-box-shadow 0.4s;
-  transition: -webkit-box-shadow 0.4s;
-  transition: box-shadow 0.4s;
-  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
   position: relative;
   display: grid;
   grid-template-columns: minmax(48px, 1fr) 178px 1fr;
