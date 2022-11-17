@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     background-color: $grey;
     font-family: $body-font;
-    font-size: to-rem(16px);
+    font-size: 1rem;
     box-sizing: border-box;
 
     @include desktop {
@@ -34,7 +34,7 @@ img {
 }
 
 button, input {
-    font-size: to-rem(16px);
+    font-size: 1rem;
 }
 
 input[type="search"]::-webkit-search-decoration,
